@@ -1,0 +1,16 @@
+Price	Size	w1	w2	Heating
+89.5	20	1	0	electricity
+79.9	14.8	1	0	electricity
+83.1	20.5	0	1	heating_oil
+56.9	12.5	0	1	heating_oil
+66.6	18	0	1	heating_oil
+82.5	14.3	0	0	natural_gas
+126.3	27.5	1	0	electricity
+79.3	16.5	1	0	electricity
+119.9	24.3	0	0	natural_gas
+87.6	20.2	0	1	heating_oil
+112.6	22	0	0	natural_gas
+120.8	19	0	0	natural_gas
+78.5	12.3	0	0	natural_gas
+74.3	  14	1	0	electricity
+74.8	16.7	0	1	heating_oil
