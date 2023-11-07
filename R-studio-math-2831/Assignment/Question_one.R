@@ -37,6 +37,7 @@ f_obs <- 19.331
 # (e) one sided partial t-test 
 t_value <- -4.397 
 p_value <- pt(abs(t_value), df=10);
+help("anova")
 p_value
 
 #(f)

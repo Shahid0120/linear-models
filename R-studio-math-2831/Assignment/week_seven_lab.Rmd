@@ -1,0 +1,50 @@
+---
+title: "lab_week_seven"
+output: html_document
+date: "2023-11-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+## Question 1 
+# a(i)
+
+install.packages("leaps")
+library(leaps)
+
+# Assuming 'biomass' is your data frame
+model <- lm(y ~ x1 + x3 + x2 + x4, data = biomass)
+model_p <- lm(y ~ x1 + x2, data = biomass)
+
+Cp <- leaps(
+  x = biomass[, 2:5],
+  y = biomass$y,
+  names = names(biomass)[2:5],
+  method = "Cp"
+)
+
+r2 <- leaps(
+  x = biomass[, 2:5],
+  y = biomass$y,
+  method = "r2"
+)
+
+adjr2 <- leaps(
+  x = biomass[, 2:5],
+  y = biomass$y,
+  method = "adjr2"
+)
+
+result <- cbind(
+  Cp$which,
+  R2 = r2$r2,
+  AdjR2 = adjr2$adjr2,
+  MallowCp = Cp$Cp,
+  p = Cp$size
+)
+
+
+Answer is model with y = b0 + b1x1 + b4x4
+
