@@ -10,7 +10,7 @@ squid=data.frame(Weight,Rostal,Wing,RostalNotch,NotchWing,Width)
 library(leaps)
 weight.best.subset <- regsubsets(Weight ~., data=squid)
 sum.weight <- summary(weight.best.subset)
-
+sum.weight
 # A3
 # Mallows' Cp
 sum.weight$cp
@@ -54,6 +54,9 @@ summary(foward.final.model)
 step.backwards <- stepAIC(full.model, scope=list(lower=intercept.only.model, upper=full.model), direction=c("backward"))
 # same model as foward
 
+
+
+
 # C
 # optimal in A
 ## Weight ~ Width + NotchWing
@@ -64,3 +67,7 @@ foward.final.model <- lm(Weight ~ Width + NotchWing, data=squid)
 plot(foward.final.model, which=1)
 plot(foward.final.model, which=2)
 plot(foward.final.model, which=3)
+plot(foward.final.model, which=4)
+plot(foward.final.model, which=5)
+
+qf(0.5,3,19)
