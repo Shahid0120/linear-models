@@ -10,3 +10,5 @@ Movies=data.frame(USRevenue, Budget, Opening, Theatres, Ratings)
 model.full <- lm(USRevenue ~ Budget + Opening + Theatres + Ratings)
 summary(model.full)
 model_one <- lm(USRevenue ~ Budget)
+
+help(qt)
